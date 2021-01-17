@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int t;
+	cin >> t;
+	while(t--){
+		long n;
+		int ans = 0;
+		cin >> n;
+		while(n != 1){
+			if(n % 2 == 0){
+				if(n == 2){
+					--n;
+					++ans;
+				}
+				else{
+					long x = n/2;
+					n /= x;
+					++ans;
+				}
+			}
+			else{
+				--n;
+				++ans;
+			}	
+		}
+		cout<<ans<<endl;
+	}	
+	return 0;
+}
